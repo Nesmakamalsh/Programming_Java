@@ -2,10 +2,12 @@ import java.util.Scanner;
 
 public class main{
     public static void main(String[] args){
+
+        /*
+        // EX.1
+
         System.out.println("Hallo ich bin Nesma\n");
-        /* 
-        This is how to write a comment
-        */
+        
        int age = 24;
        boolean istNett = true;
        System.out.println("Ich bin " + age + " Jahre alt");
@@ -52,7 +54,53 @@ public class main{
         System.out.println(Place + " ist eine shöne Stadt:)");
        }
 
+       scanner.nextLine();      //to clear the input buffer
 
        scanner.close();
+
+       */
+
+        //------------------------------------------------
+
+        /*
+        // EX.2 
+
+        Scanner rectangle = new Scanner(System.in);
+
+        System.out.println("Enter the width and height of a rectangle");
+
+        double width = rectangle.nextDouble();
+
+        double height = rectangle.nextDouble();
+
+        double area = width * height;
+
+        System.out.println("The area of the rectangle = " + area);
+
+
+        rectangle.close();
+
+        */
+
+        Scanner cart = new Scanner(System.in);
+
+        System.out.print("What item would you like to buy?: ");
+
+        String item = cart.nextLine();
+
+        System.out.print("What is the price for each?: ");
+
+        double price = cart.nextDouble();
+
+        System.out.print("How many would you like?: ");
+
+        int quantity = cart.nextInt();
+
+        double total = price * quantity;
+
+        System.out.println(" You have bought " + quantity + " " + item);
+        System.out.println(" Your total is $" + total);
+
+        cart.close();
     }
 }
