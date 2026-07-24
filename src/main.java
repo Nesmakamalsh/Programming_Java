@@ -157,21 +157,56 @@ public class main{
       nameCheck = name.equalsIgnoreCase("Nesmo komol");
 
       System.out.printf("%d %c %d %d %s %b %b %b\n", len, letter, index, lastIndex, name, nameState, nameSpaces, nameCheck);
+        
+
+      int income = 3000;
+      double taxRate = (income >= 4000) ? 0.25 : 0.15;
+      System.out.printf("%.2f\n", taxRate);
       
+
+
       String email = "ne.kamal@nu.edu.eg";
       int sepIndex = email.indexOf("@");
       String userName = email.substring(0, sepIndex);
       String domain = email.substring(sepIndex, email.length());
       //String domain = email.substring(sepIndex + 1);
       System.out.printf("Username: %s\n Domain: %s\n", userName, domain);
+
       */
 
-   /*Ex.7 */
+   /*Ex.7 
+
+   Scanner scanner = new Scanner(System.in);
+   System.out.printf("Enter the first number: ");
+   double num1 = scanner.nextDouble();
+   System.out.printf("Enter the Second number: ");
+   double num2 = scanner.nextDouble();
+   System.out.printf("Enter the operator: ");
+   String operation = scanner.next();
+   
+   switch(operation){
+    case "+" -> System.out.printf("%.2f + %.2f = %.2f\n", num1, num2, num1+num2);
+    case "-" -> System.out.printf("%.2f - %.2f = %.2f\n", num1, num2, num1-num2);
+    case "*" -> System.out.printf("%.2f * %.2f = %.2f\n", num1, num2, num1*num2);
+    case "/" -> System.out.printf("%.2f / %.2f = %.2f\n", num1, num2, num1/num2);
+    case "^" -> System.out.printf("%.2f ^ %.2f = %.2f\n", num1, num2, Math.pow(num1, num2));
+    default -> System.out.println("Choose one of these operations: +, -, *, /, ^");
+   }
+    scanner.close();
+
+   */
+  Scanner scanner = new Scanner(System.in);
+  String var;
+
+   do{
+    System.out.println("You are trapped, you must find an Exit!");
+    var = scanner.nextLine();
+   }while(!var.equals("Q"));
 
 
        
 
-      
+    scanner.close();
        
     }
 }
