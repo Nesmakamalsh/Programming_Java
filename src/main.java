@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class main{
     public static void main(String[] args){
@@ -82,6 +83,8 @@ public class main{
 
         */
 
+        /* Ex.3
+
         Scanner cart = new Scanner(System.in);
 
         System.out.print("What item would you like to buy?: ");
@@ -102,5 +105,73 @@ public class main{
         System.out.println(" Your total is $" + total);
 
         cart.close();
+        */
+
+        /* Ex.4
+
+       Random random = new Random();
+
+       int dice = random.nextInt(1, 7);
+
+       boolean coin = random.nextBoolean();
+
+       if(coin){
+        System.out.println("the coin is flipped as: Heads");
+       }
+       else{
+        System.out.println("the coin is flipped as: Tails");
+       }
+
+       System.out.println("the num generated = " + dice);
+       */
+      /*Ex.5
+     //Math.PI
+     // Math.E
+     // Math.pow(2, 3);
+     //Math.abs();
+     // Math.sqrt();
+     // Math.round();
+     // Math.ceil(),     >> round up
+     // Math.floor();    >> round down
+     // Math.max(20,30);
+     // Math.min(20,30);
+     
+      System.out.printf("num = %.2f\n", Math.sqrt(15));
+      String name = "nesma";
+      int age = 24;
+      System.out.printf("%s is %d years old.", name, age);
+      */
+
+      /*Ex.6 
+      String name = "nesma kamal";
+      int len = name.length();
+      char letter = name.charAt(0);
+      int index = name.indexOf("a"); //1st occurance
+      int lastIndex = name.lastIndexOf("a"); //last occurance
+      name = name.toUpperCase();
+      name = name.toLowerCase();
+      name = name.replace("a", "o");
+      boolean nameState = name.isEmpty();
+      boolean nameSpaces = name.contains(" ");
+      boolean nameCheck = name.equals("password");
+      nameCheck = name.equalsIgnoreCase("Nesmo komol");
+
+      System.out.printf("%d %c %d %d %s %b %b %b\n", len, letter, index, lastIndex, name, nameState, nameSpaces, nameCheck);
+      
+      String email = "ne.kamal@nu.edu.eg";
+      int sepIndex = email.indexOf("@");
+      String userName = email.substring(0, sepIndex);
+      String domain = email.substring(sepIndex, email.length());
+      //String domain = email.substring(sepIndex + 1);
+      System.out.printf("Username: %s\n Domain: %s\n", userName, domain);
+      */
+
+   /*Ex.7 */
+
+
+       
+
+      
+       
     }
 }
