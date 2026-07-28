@@ -2,7 +2,10 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class main{
-    public static void main(String[] args){
+
+    int x = 5;   //class var can be used among all classes
+    static double balance = 0;
+    public static void main(String[] args) throws InterruptedException{
 
         /*
         // EX.1
@@ -195,6 +198,7 @@ public class main{
     scanner.close();
 
    */
+  /* 
   Scanner scanner = new Scanner(System.in);
   String var;
 
@@ -207,6 +211,105 @@ public class main{
        
 
     scanner.close();
-       
+       */
+
+    /* 
+
+    Scanner scanner = new Scanner(System.in);
+    double num;
+
+    do{
+        System.out.print("What is the time RN? ");
+        num = scanner.nextDouble();
+        if(num < 12){
+        System.out.println("Wait a bit");}
+    }while(num < 11.59 && num < 12);
+
+    if(num < 12){
+        for(int i=10; i>0; i--){
+        System.out.println(i);
+        Thread.sleep(1000);
     }
+    System.out.println("Happy New year!");
+
+    }
+    else{
+        System.out.println("Enjoy ur celebration!");
+    }
+
+    scanner.close();
+    */
+
+    /* 
+   String name = "Nesma";
+   int age = 24;
+
+   introduceurself(name, age);
+
+   double num = 5.25;
+
+   System.out.println(sqrnum(num));
+    */  
+   /* 
+
+   int x = 3; //local var to the main class
+   System.out.println(x);  //local vars have higher pirority over class vars inside the class if both have the same name param
+    */
+// Declare vars
+ Scanner scanner = new Scanner(System.in);
+ int choice;
+
+// display menu
+
+System.out.println("*****************");
+System.out.println("Banking Program");
+System.out.println("*****************");
+System.out.println("1. Show Balance");
+System.out.println("2. Deposit");
+System.out.println("3. Withdraw");
+System.out.println("4. Exit");
+System.out.println("Enter your choice: (1-4)");
+//get and process users choice
+choice = scanner.nextInt();
+//show balance()
+if(choice == 1){
+    System.out.printf("Your current Balance = %f \n", showBalance(balance));
+}
+else if(choice == 2){
+
+}
+//deposit()
+//withdraw()
+//exit mssg
+
+scanner.close();
+
+    }
+
+
+    //metods in Java are replacing functions as each function needs to be in a class in java so it's a method
+    /* 
+    static void introduceurself(String name, int age){
+        //void means return nothing, if there is a return it can be int, double..etc instead of void
+        System.out.printf("My name is %s \n", name);
+        System.out.printf("I am %d yrs \n", age);
+    }
+
+    static double sqrnum(double num){
+        return Math.sqrt(num);
+    }
+        */
+
+    static double showBalance(double balance){ 
+
+        return balance;
+    }
+
+    static double Deposit(double amount){
+        balance = balance + amount;
+        return balance;
+    }
+
+
+
 }
