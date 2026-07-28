@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.Random;
+import java.util.Arrays;
 
 public class main{
 
@@ -161,7 +162,6 @@ public class main{
 
       System.out.printf("%d %c %d %d %s %b %b %b\n", len, letter, index, lastIndex, name, nameState, nameSpaces, nameCheck);
         
-
       int income = 3000;
       double taxRate = (income >= 4000) ? 0.25 : 0.15;
       System.out.printf("%.2f\n", taxRate);
@@ -255,34 +255,102 @@ public class main{
    int x = 3; //local var to the main class
    System.out.println(x);  //local vars have higher pirority over class vars inside the class if both have the same name param
     */
-// Declare vars
+
+   /* 
+//Banking Program
  Scanner scanner = new Scanner(System.in);
  int choice;
+ double insertMoney;
+ double withdrawMoney;
 
-// display menu
+do{
 
-System.out.println("*****************");
-System.out.println("Banking Program");
-System.out.println("*****************");
-System.out.println("1. Show Balance");
-System.out.println("2. Deposit");
-System.out.println("3. Withdraw");
-System.out.println("4. Exit");
-System.out.println("Enter your choice: (1-4)");
-//get and process users choice
-choice = scanner.nextInt();
-//show balance()
-if(choice == 1){
-    System.out.printf("Your current Balance = %f \n", showBalance(balance));
+    System.out.println("*****************");
+    System.out.println("Banking Program");
+    System.out.println("*****************");
+    System.out.println("1. Show Balance");
+    System.out.println("2. Deposit");
+    System.out.println("3. Withdraw");
+    System.out.println("4. Exit");
+    System.out.printf("Enter your choice (1-4): ");
+
+    choice = scanner.nextInt();
+
+    if(choice == 1){
+    System.out.printf("Your current Balance is %f EUR \n", showBalance());
 }
 else if(choice == 2){
+    System.out.printf("Enter your deposit amount: ");
+    insertMoney = scanner.nextDouble();
+    Deposit(insertMoney);
+    System.out.printf("You've deposit %f EUR into your account \n", insertMoney);
+}
+else if(choice == 3){
+    System.out.printf("Enter your withdrawal amount: ");
+    withdrawMoney = scanner.nextDouble();
+    Withdraw(withdrawMoney);
+    System.out.printf("You've withdrawed %f EUR \n", withdrawMoney);
 
 }
-//deposit()
-//withdraw()
-//exit mssg
+else{
+    System.out.println("Invalid input!");
+}
+
+}while(choice != 4);
+
+System.out.println("Thanks for using our service, have a good day!");
+
+
 
 scanner.close();
+*/
+Scanner scanner = new Scanner(System.in);
+
+//String[] fruits = {"Orange", "Apple", "Banana", "Grabs"};
+
+//int numofFruits = fruits.length;
+//System.out.println(numofFruits);
+
+//System.out.println(fruits[1]);
+// for printing all elements
+
+//Arrays.sort(fruits);  //arranged alphapitacally
+//Arrays.fill(fruits, "pineapple");
+
+//for(String fruit : fruits){                //enhanced for loop/ for each loop
+ //   System.out.println(fruit);
+//}
+
+//String[] names = new String[3];  //to create an empty array you need to know the size of the array
+
+//for(int i=0; i<3; i++){
+//    names[i] = scanner.nextLine();
+//}
+
+//for(String name : names){
+//   System.out.println(name);}
+/* 
+int[] numbers = {1,2,3,4,5,6};
+int target = 5;
+
+for(int i=0; i<numbers.length; i++){
+    if(target == numbers[i]){
+        System.out.printf("the target in index %d \n", i);
+        break;
+    }
+}*/
+String[] fruits = {"Orange", "Apple", "Banana", "Grabs"};
+String target = "grabs";
+
+for(int i=0; i<fruits.length; i++){
+    if(target.equalsIgnoreCase(fruits[i])){   // string is a refernce type var which means comparing the memory locations and that is not the target
+        System.out.printf("the target in index %d \n", i);
+        break;
+    }
+}
+
+scanner.close();
+
 
     }
 
@@ -300,7 +368,9 @@ scanner.close();
     }
         */
 
-    static double showBalance(double balance){ 
+    /* //BANKING PROGRAM METHODS 
+
+    static double showBalance(){ 
 
         return balance;
     }
@@ -309,6 +379,12 @@ scanner.close();
         balance = balance + amount;
         return balance;
     }
+    static double Withdraw(double amount){
+        balance = balance - amount;
+        return balance;
+    }
+        
+*/
 
 
 
