@@ -339,7 +339,7 @@ for(int i=0; i<numbers.length; i++){
         break;
     }
 }*/
-String[] fruits = {"Orange", "Apple", "Banana", "Grabs"};
+/*String[] fruits = {"Orange", "Apple", "Banana", "Grabs"};
 String target = "grabs";
 
 for(int i=0; i<fruits.length; i++){
@@ -350,6 +350,20 @@ for(int i=0; i<fruits.length; i++){
 }
 
 scanner.close();
+*/
+//add(1,2,3,4,5);
+
+//System.out.println(average(1,2,3,4,5));
+
+char[][] telephone = {{'0','1','2'},{'3','4','5'},{'6','7','8'},{'9','0','#'}};
+
+for(char[] nums:telephone){
+    for(char num:nums){
+        System.out.printf("%c ",num);
+    }
+    System.out.println();
+
+}
 
 
     }
@@ -385,6 +399,29 @@ scanner.close();
     }
         
 */
+//for unknown no. of arguments, ... is a way to pack all the arguments in array
+static void add(int... numbers){
+    
+    for(int i=0; i< numbers.length; i++){
+        System.out.println(numbers[i]);
+    }
+
+}
+
+
+static double average(double... nums){
+    double sum = 0;
+    for(double num : nums){
+        sum += num;
+    }
+
+    int len = nums.length;
+
+    return (sum / len);
+
+
+}
+
 
 
 
