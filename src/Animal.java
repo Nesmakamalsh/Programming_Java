@@ -6,6 +6,9 @@ public class Animal extends Zoo{
         this.color = color;
     }
         
+    void move(){
+        System.out.println("the animal is running");
+    }
 
     void eat(){
         System.out.println("the animal is eating");

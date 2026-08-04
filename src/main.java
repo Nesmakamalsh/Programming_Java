@@ -488,6 +488,18 @@ cat.Speak();
 dog.intro();
 cat.intro();
 System.out.println(cat.isAlive);
+// method override is when a subclass (child) provide its own implementation of a method that was prev defined as to overriding this method to suit this child specifically
+Fish fish = new Fish("nemo", "Fish", "orange");
+
+dog.move();
+cat.move();
+fish.move();
+
+//.toString(): method inherited from the object class. used to return a string representation of an object instead of Hahcode refering to a memory address, this hash code can be overriden with a string
+
+Car car = new Car("Ford", "Mustang", 2025, 500000);
+
+System.out.println(car);
 
 scanner.close();
 
