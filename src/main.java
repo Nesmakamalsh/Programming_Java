@@ -464,12 +464,30 @@ for(Car car:cars){
 */
 //Static belongs to the class itself. Non-static belongs to an object created from the class.
 //static make a var or a method belong to the class instead of belonging to an object from the class >> used for shared resources over the whole class or utilitz methods like Math.round(), round() is a static method of the Math class so we don't need to create an object from math in order to use round method
+/* 
 Friend friend1 = new Friend("salah");
 Friend friend2 = new Friend("salma");
 Friend friend3 = new Friend("sadeen");
 
 //used the class directly not friend1 obj for example, meaning the numofFriends is public to the whole class not local to any obj
 Friend.num();
+*/
+//inheritance: one class inhirets the attributes and methods from another class Child <- Parent 
+//                                                                                   -> dog    
+// Child <- Parent <- Grandparent     >>> multilevel inhertance   ex: Zoo -> Animal -
+//                                                                                   -> cat 
+Dog dog = new Dog("Poppy", "Dog", "black");
+System.out.println(dog.isAlive);
+Cat cat = new Cat("citty", "cat", "stipped white and beige");
+System.out.println(cat.isAlive);
+dog.eat();
+cat.eat();
+dog.Speak();
+cat.Speak();
+
+dog.intro();
+cat.intro();
+System.out.println(cat.isAlive);
 
 scanner.close();
 
