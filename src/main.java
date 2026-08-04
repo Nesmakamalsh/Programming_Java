@@ -6,6 +6,9 @@ public class main{
 
     int x = 5;   //class var can be used among all classes
     static double balance = 0;
+    static String[] Questions = {"What is Austria 1st language?", "Who is the current Egyptian presedient?", "What is the meal i am craving the most?"};
+    static String[][] Answers = {{"1. English", "2. Deutsch", "3. Spanish"},{"1. Sese", "2. Morsi", "3. Sadat"},{"1. Molocheia", "2. Bamya", "3. Mahshi"}};
+
     public static void main(String[] args) throws InterruptedException{
 
         /*
@@ -355,7 +358,7 @@ scanner.close();
 
 //System.out.println(average(1,2,3,4,5));
 
-char[][] telephone = {{'0','1','2'},{'3','4','5'},{'6','7','8'},{'9','0','#'}};
+/*char[][] telephone = {{'0','1','2'},{'3','4','5'},{'6','7','8'},{'9','0','#'}};
 
 for(char[] nums:telephone){
     for(char num:nums){
@@ -363,7 +366,59 @@ for(char[] nums:telephone){
     }
     System.out.println();
 
+}*/
+/* 
+int ansInput;
+int total = 0;  
+
+System.out.println("*************************");
+System.out.println("Welcome to the quiz game!");
+System.out.println("*************************");
+System.out.println();
+printQuestions(1);
+System.out.println();
+printAnswers(1);
+System.out.println();
+System.out.printf("Enter your choice (1-3): ");
+ansInput = scanner.nextInt();
+if(ansCheck(1, ansInput)){
+    total += 1;
 }
+
+System.out.println();
+printQuestions(2);
+System.out.println();
+printAnswers(2);
+System.out.println();
+System.out.printf("Enter your choice (1-3): ");
+ansInput = scanner.nextInt();
+if(ansCheck(2, ansInput)){
+    total += 1;
+}
+
+System.out.println();
+printQuestions(3);
+System.out.println();
+printAnswers(3);
+System.out.println();
+System.out.printf("Enter your choice (1-3): ");
+ansInput = scanner.nextInt();
+if(ansCheck(3, ansInput)){
+    total += 1;
+}
+System.out.println();
+System.out.printf("You've guessed %d right answers out of 3", total);
+*/
+
+// Objects : entities that hold data (attributes)
+Car car = new Car();
+
+System.out.println(car.model);
+// objects : can perform actions (methods)
+car.start();
+car.stop();
+
+scanner.close();
 
 
     }
@@ -400,6 +455,7 @@ for(char[] nums:telephone){
         
 */
 //for unknown no. of arguments, ... is a way to pack all the arguments in array
+/* 
 static void add(int... numbers){
     
     for(int i=0; i< numbers.length; i++){
@@ -422,7 +478,85 @@ static double average(double... nums){
 
 }
 
+static void printQuestions(int quesNum){
 
+    switch(quesNum){
+        case 1 -> System.out.println(Questions[0]);
+        case 2 -> System.out.println(Questions[1]);
+        case 3 -> System.out.println(Questions[2]);
+    }
+}
 
+static void printAnswers(int ansNum){
+    switch(ansNum){
+        case 1 : {
+            for(int i=0; i<3; i++){
+                System.out.println(Answers[0][i]);
+            }
+        };
+        break;
+        case 2 : {
+            for(int i=0; i<3; i++){
+                System.out.println(Answers[1][i]);
+            }
+        };
+        break;
+        case 3 :{
+            for(int i=0; i<3; i++){
+                System.out.println(Answers[2][i]);
+            }
+        };
+        break;
+    }
+}
+
+static boolean ansCheck(int quesInput, int ansInput){
+    switch(quesInput){
+        case 1 :{
+            switch(ansInput){
+                case 1 :{
+                    return false;
+                }
+                case 2 :{
+                    return true;
+                }
+                case 3 :{
+                    return false;
+                }
+             }
+        };
+        case 2 :{
+            switch(ansInput){
+                case 1 :{
+                    return true;
+                }
+                case 2 :{
+                    return false;
+                }
+                case 3 :{
+                    return false;
+                }
+             }
+        };
+        case 3 :{
+            switch(ansInput){
+                case 1 :{
+                    return false;
+                }
+                case 2 :{
+                    return false;
+                }
+                case 3 :{
+                    return true;
+                }
+             }
+        };
+        default :{
+            return false;
+        }
+    }
+
+}
+*/
 
 }
