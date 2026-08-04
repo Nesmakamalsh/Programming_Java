@@ -13,4 +13,13 @@ public class Car {
     void stop(){
         System.out.println("Stop the engine");
     }
+
+    void drive(){
+        System.out.println("You drive a "+this.make +" "+ this.model);
+    }
+
+    Car(String make, String model){
+        this.make = make;
+        this.model = model;
+    }
 }

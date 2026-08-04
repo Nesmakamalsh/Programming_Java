@@ -359,7 +359,7 @@ scanner.close();
 //System.out.println(average(1,2,3,4,5));
 
 /*char[][] telephone = {{'0','1','2'},{'3','4','5'},{'6','7','8'},{'9','0','#'}};
-
+//enhanced for loop
 for(char[] nums:telephone){
     for(char num:nums){
         System.out.printf("%c ",num);
@@ -409,7 +409,7 @@ if(ansCheck(3, ansInput)){
 System.out.println();
 System.out.printf("You've guessed %d right answers out of 3", total);
 */
-
+/* 
 // Objects : entities that hold data (attributes)
 Car car = new Car();
 
@@ -417,6 +417,59 @@ System.out.println(car.model);
 // objects : can perform actions (methods)
 car.start();
 car.stop();
+*/
+
+//Constructor: a special method in a class to intialise objects, within you can pass different arguments to different objects  
+/* 
+Student student1 = new Student("Nesma", 24, 3.73);
+Student student2 = new Student("Ahmed", 28, 3.99);
+
+System.out.println(student1.name +" "+ student1.age +" "+ student1.GPA+" "+ student1.isEnrolled);
+System.out.println(student2.name+" "+ student2.age +" "+ student2.GPA+" "+ student2.isEnrolled);
+
+student1.work();
+student2.work();
+*/
+
+//Overloaded constructors: allowing class to have multiple constuctors with different parameter lists. and enble objects to be initialised in different ways
+/* 
+User user1 = new User("Nesma");
+User user2 = new User("Ahmed", "Ahmed.Aboahmed@iis.fraunhofer.de", "ahmed06121997");
+User user3 = new User("Valerio", "Radishi.valerio@infineon.com");
+
+System.out.println(user1.username +" "+ user1.password);
+System.out.println(user2.username +" "+user2.email+" "+ user2.password);
+System.out.println(user3.username +" "+user3.email+" "+ user3.password);
+
+user1.company();
+user2.company();
+*/
+//Car[] is the data type >> array of objects
+/* 
+Car car1 = new Car("Fiat", "128");
+Car car2 = new Car("BMW", "BLA");
+Car car3 = new Car("Audi", "BLABLA");
+
+Car[] cars = {car1, car2, car3};
+
+for(int i =0; i<cars.length; i++){
+    cars[i].drive();
+}*/
+/* 
+Car[] cars = {new Car("Fiat", "128"), new Car("BMW", "BLA"), new Car("Audi", "BLABLA")};
+
+for(Car car:cars){
+    car.drive();
+}
+*/
+//Static belongs to the class itself. Non-static belongs to an object created from the class.
+//static make a var or a method belong to the class instead of belonging to an object from the class >> used for shared resources over the whole class or utilitz methods like Math.round(), round() is a static method of the Math class so we don't need to create an object from math in order to use round method
+Friend friend1 = new Friend("salah");
+Friend friend2 = new Friend("salma");
+Friend friend3 = new Friend("sadeen");
+
+//used the class directly not friend1 obj for example, meaning the numofFriends is public to the whole class not local to any obj
+Friend.num();
 
 scanner.close();
 
