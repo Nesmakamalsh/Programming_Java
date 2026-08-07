@@ -1,6 +1,16 @@
 import java.util.Scanner;
+
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
+
 import java.util.Random;
+import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -772,7 +782,7 @@ public class main {
         // 2. BufferedWriter >> Large amount of text
         // 3. PrintWriter >> Structured data like reports, logs
         // 4. FileOutputStream >> Best for binary files (e.g. videos, images, audio files)
-
+        /* 
         String filePath = "test.txt";
         String textContent = """
                 Everybody tells me that it's about time that i moved on;
@@ -789,11 +799,81 @@ public class main {
         catch (IOException err){
             System.out.println("Can't write this file");
         }
+        */
     
         // Read files using Java (3 popular options)
         // 1. BufferedReader + FileReader >> best for reading text files line by line
         // 2. FileInputStream >> Best for binary files (e.g. videos, images, audio files)
         // 3. RandomAccessFile >> Best for read/write a specific portions of a large file
+
+        /* 
+
+        String filePath = "test.txt";
+
+        try(BufferedReader reader = new BufferedReader(new FileReader(filePath))){
+            String line;
+            while((line = reader.readLine()) != null){
+                System.out.println(line);
+            }
+
+        } catch(FileNotFoundException err){
+            System.out.println("could not locate this file");
+        } catch(IOException err){
+            System.out.println("smth went wrong");
+        }
+            */
+
+        /*
+
+        String filePath = "/workspaces/Programming_JavaxPython/Halfway In - Anno Domini Beats.au";
+        File file = new File(filePath);
+
+        System.out.println(file.exists());
+        System.out.println(file.getAbsolutePath());
+
+        
+        try(Scanner scanner = new Scanner(System.in);
+            AudioInputStream audio = AudioSystem.getAudioInputStream(file)){
+                Clip clip = AudioSystem.getClip();
+                clip.open(audio);
+
+                String response = " ";
+
+                while(!response.equals("Q")){
+                    System.out.println("press P to play the song");
+                    System.out.println("press S to stop the song");
+                    System.out.println("press R to reset the song");
+                    System.out.println("press Q to quit");
+                    System.out.printf("Enter your choice: ");
+                    response = scanner.next().toUpperCase();
+
+                    switch(response){
+                        case "P" -> clip.start();
+                        case "S" -> clip.stop();
+                        case "R" -> clip.setMicrosecondPosition(0);
+                        case "Q" -> clip.close();
+                        default -> System.out.println("Invalid Input");
+                    }
+                }
+
+        }
+        catch(FileNotFoundException err){
+            System.out.println("can't locate the Audio file");
+        } catch (LineUnavailableException err){
+            System.out.println("Can't access the Audio file");
+        } catch (UnsupportedAudioFileException err){
+            System.out.println("Unsupported Audio file");
+        }
+        catch(IOException err){
+            System.out.println("smth went wrong");
+        }
+        finally{
+            System.out.println("Bye!");
+        }
+
+        */
+
+
 
         
 
