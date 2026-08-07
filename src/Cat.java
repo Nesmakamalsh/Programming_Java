@@ -1,3 +1,4 @@
+/* 
 public class Cat extends Animal{
 
     Cat(String name, String type, String color){
@@ -10,4 +11,13 @@ public class Cat extends Animal{
         System.out.println("the cat goea meow");
     }
     
+}
+    */
+
+public class Cat implements Prey{
+
+    @Override
+    public void flee(String name){
+        System.out.printf("run away from the %s!\n", name);
+    }
 }

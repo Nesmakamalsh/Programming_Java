@@ -1,3 +1,4 @@
+/* 
 public class Car {
     String make = "Ford";
     String model = "Mustang";
@@ -29,4 +30,35 @@ public class Car {
     public String toString(){
         return this.make +" "+ this.model+" "+this.year+" "+this.price;
     }
+}
+*/
+/* 
+public class Car implements Veichle{
+    
+    @Override
+    public void go(){
+        System.out.println("drive the car");
+    }
+}
+    */
+
+public class Car{
+
+    String model;
+    int year;
+    Engine engine;
+
+
+    Car(String model, int year, String engineType){
+        this.model = model;
+        this.year=year;
+        this.engine = new Engine(engineType);
+    }
+
+    void start(){
+        engine.start();
+        System.out.println("The "+this.model+" "+ this.year+" Car is running");
+    }
+
+
 }
