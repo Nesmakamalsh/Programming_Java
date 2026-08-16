@@ -14,6 +14,9 @@ public class Student{
         this.isEnrolled = true;
 
     }
+    Student(String name){
+        this.name = name;
+    }
 
     void work(){
         System.out.println(this.name +" is a good coworker");

@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
@@ -13,9 +15,14 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.InputMismatchException;
 
 public class main {
@@ -872,6 +879,118 @@ public class main {
         }
 
         */
+
+        /* 
+
+        //DATE AND TIME
+        LocalDate date = LocalDate.now();
+        LocalTime time = LocalTime.now();
+        LocalDateTime dateTime = LocalDateTime.now();
+
+        //CUSTOM FORMAT
+        LocalDateTime customDateTime = LocalDateTime.now();
+
+        DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+        String newDateTime = dateTime.format(format);
+        System.out.println(newDateTime);
+
+        //comparing dates
+
+        LocalDateTime date1 = LocalDateTime.of(2025, 10, 4, 2, 0, 0);
+        LocalDateTime date2 = LocalDateTime.of(2025, 10, 23, 11, 0, 0);
+
+        if(date1.isAfter(date2)){
+            System.out.println("This is the last song i write about you");
+        }
+        else{
+            System.out.println("Someday we'll meet");
+        }
+            */
+
+
+        //Anonymous Class: class doesn't have a name, and can't be reused.
+        // for adding a custom behavior without needing to create a new class
+        // used with (TimerTask, Runnable, callbacks)
+    /* 
+
+        Student budy= new Student("agela"){
+            @Override
+            void work(){
+                System.out.println("never work wth that mthf coworker "+ this.name);
+            }
+        };
+
+
+        budy.work();
+
+        */
+
+        //Timer: class that is used to schedule tasks at a spicific time or periodically
+        //TimerTask: represents the task that will be excuted by the timer
+
+        /* 
+        Scanner scanner = new Scanner(System.in);
+
+        Timer timer = new Timer();
+        System.out.printf("Set up your count down start value: ");
+        TimerTask task = new TimerTask() {
+            int count = scanner.nextInt();
+            @Override
+            public void run(){
+                
+                System.out.println(count);
+                count--;
+                if(count<0){
+                    System.out.println("Time is up!");
+                    timer.cancel();
+                }
+            }
+        };
+
+        timer.schedule(task, 0,1000);
+        scanner.close();
+        */
+
+        //Generics: A concept where you can write a class, method, interface compatable with different data types.
+        // <T, U> TYPE PARAMETER ACTS AS A PLACE HOLDER FOR THE DATATYPE
+        // <TYPE> type argument that spicifies the type.
+
+        /* 
+
+        Box<String, Double> box = new Box<>("Pain Killer", 45.5);
+
+        box.setItem("Pain killer");
+
+        System.out.println(box.getItem());
+        */
+
+        //Hash map: data structure that stores Key-value pairs
+        //Keys are unique but values can be duplicated
+        //doesn't maintain any order but memorey effiecent HashMap<Key, value>
+
+        /* 
+
+        HashMap<String, Double> map = new HashMap<>();
+        map.put("wound", 6.5);
+        map.put("infinte", 10.3);
+        map.put("faith", 0.0);
+
+        System.out.println(map.get("wound"));
+        System.out.println(map.size());
+        */
+
+        //EX
+
+        
+
+
+
+
+
+
+
+
+
 
 
 
