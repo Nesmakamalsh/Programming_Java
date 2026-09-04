@@ -979,9 +979,47 @@ public class main {
         System.out.println(map.size());
         */
 
-        //EX
+        //EX8
+        /* 
 
-        
+        System.out.println(Rectangle2.getCount()); //count is a static member: meaning it belongs to the whole class not a certain obj inside it, it's used when we want a certain param to be global and fixed to all objects 
+                                            // if the count or any other parameter is private >> need to be accessed be Getters , Setters
+
+        Rectangle2 rec1 = new Rectangle2();
+        System.out.println(Rectangle2.getCount());
+
+        Rectangle2 rec2 = new Rectangle2(5, 10);
+        System.out.println(Rectangle2.getCount());
+
+        rec1.calculateArea();
+        rec2.calculateArea();
+
+        System.out.println(rec1.getHeight());
+        System.out.println(rec1.getWidth());
+        System.out.println(rec1.getArea());
+
+        System.out.println( rec2.getHeight());
+        System.out.println( rec2.getWidth());
+        System.out.println(rec2.getArea());
+
+        */
+       
+
+
+
+
+
+        //Java ASS1:
+        /* 
+
+        System.out.println("Nesma");
+        System.out.println(24);
+        System.out.println("Nesma");
+        */
+
+
+
+
 
 
 

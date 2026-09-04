@@ -24,3 +24,5 @@ This design enables Java’s “Write Once, Run Anywhere” principle.
 ![vars](image-2.png)
 ![alt text](image-3.png)
 ![alt text](image-4.png)
+Static parameter:
+![alt text](image-5.png)
