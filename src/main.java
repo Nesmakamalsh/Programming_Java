@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Set;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -23,7 +24,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.InputMismatchException;
+import java.util.List;
 
 public class main {
 
@@ -1003,7 +1006,36 @@ public class main {
         System.out.println(rec2.getArea());
 
         */
-       
+       //Lists: similar to array but has built in functions, doesn't need the array length/indecies to add/remove/update elements
+
+       List<Integer> myIntegers = new ArrayList<>();
+       myIntegers.add(1);
+       myIntegers.add(2);
+       myIntegers.add(3);
+       myIntegers.add(4);
+
+       System.out.println(myIntegers);
+       System.out.println(myIntegers.size());
+
+       myIntegers.remove(3);
+       System.out.println(myIntegers);
+       System.out.println(myIntegers.size());
+
+       myIntegers.set(2, 30);
+       System.out.println(myIntegers);
+       System.out.println(myIntegers.size());
+    // Set: unordered collection of elements, each is unique, no duplicates 
+       Set<String> Fruits = new HashSet<>();
+
+        Fruits.add("Apple");
+        Fruits.add("Banana");
+        Fruits.add("berry");
+        Fruits.add("Apple");
+
+        System.out.println(Fruits);
+
+
+
 
 
 
